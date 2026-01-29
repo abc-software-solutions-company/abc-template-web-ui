@@ -1,9 +1,9 @@
 {
   "name": "abc-ui-template-web",
-  "version": "0.0.1",
+  "version": "1.1.1",
   "description": "UI component library built with shadcn/ui and Tailwind CSS",
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
@@ -15,6 +15,7 @@
   "peerDependencies": {
     "react": ">=17",
     "react-dom": ">=17",
+    "react-hook-form": ">=7.0.0",
     "tailwindcss": ">=3.0.0"
   },
   "dependencies": {
@@ -39,6 +40,7 @@
     "@vitejs/plugin-react": "^5.1.2",
     "autoprefixer": "^10.4.23",
     "postcss": "^8.5.6",
+    "react-hook-form": "^7.71.1",
     "storybook": "^8.6.15",
     "tailwindcss": "^3.4.0",
     "tsup": "^8.0.1",
@@ -47,18 +49,34 @@
   },
   "scripts": {
     "build": "tsup",
+    "deploy": "npm run build && npm publish",
     "dev": "tsup --watch",
     "lint": "tsc --noEmit",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepublishOnly": "npm run build && npm run lint",
+    "pack": "npm pack --dry-run"
   },
   "keywords": [
     "ui",
     "components",
     "react",
     "tailwindcss",
-    "shadcn"
+    "shadcn",
+    "design-system",
+    "ui-library"
   ],
-  "author": "",
-  "license": "MIT"
+  "author": "ABC Company <dev@abc.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abc-company/abc-ui-template-web.git"
+  },
+  "homepage": "https://github.com/abc-company/abc-ui-template-web#readme",
+  "bugs": {
+    "url": "https://github.com/abc-company/abc-ui-template-web/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
 }

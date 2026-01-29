@@ -1,0 +1,47 @@
+# Source code
+src/
+!src/globals.css
+
+# Development files
+.storybook/
+*.stories.tsx
+*.stories.ts
+
+# Build tools
+tsup.config.ts
+tailwind.config.js
+postcss.config.js
+tsconfig.json
+
+# Development dependencies
+node_modules/
+
+# Documentation and examples
+demo.html
+PUBLISH_GUIDE.md
+debug-storybook.log
+
+# Git and IDE
+.git/
+.gitignore
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Storybook output
+storybook-static/

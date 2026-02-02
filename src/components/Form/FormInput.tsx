@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Controller, Control, FieldPath, FieldValues } from "react-hook-form"
-import { Input, InputProps } from "../ui/Input/Input"
+import { Input, InputProps } from "../Input/Input"
 import { FormField } from "./FormField"
 import { cn } from "../../lib/utils"
 import {
